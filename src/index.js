@@ -1,3 +1,6 @@
 import '@babel/polyfill'
+import React, { Component } from 'react';
+import ReactDOM from 'react-dom'
+import App from './compoments/app'
 
-alert('成功')
+ReactDOM.render(<App />, document.getElementById('root'))

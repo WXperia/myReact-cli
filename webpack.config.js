@@ -35,10 +35,7 @@ const config = {
                         }
                     },
                     {
-                        loader: 'sass-loader',
-                        options: {
-
-                        }
+                        loader: 'sass-loader'
                     },
                     {
                         loader: 'postcss-loader'
@@ -62,6 +59,35 @@ const config = {
                         loader: 'postcss-loader'
                     }
                 ]
+            },
+            {
+                test: /\.less$/,
+                use: [
+                    {
+                        loader: 'style-loader'
+                    },
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            importLoaders: 2,
+                            modules: true
+                        }
+                    },
+                    {
+                        loader: 'less-loader'
+                    },
+                    {
+                        loader: 'postcss-loader'
+                    }
+                ]
+            },
+            {
+                test: /\.(jpg|jpeg|png|gif)$/,
+                use: [
+                    {
+                        loader: 'file-loader'
+                    }
+                ]
             }
         ]
     },
@@ -78,6 +104,10 @@ const config = {
         port: 8080,
         hot: true,
         hotOnly: true
-    }
+    },
+    optimization: {
+        minimize: false
+      },
+    devTool: 'cheap-source-map'
 }
 module.exports = config
