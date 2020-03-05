@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/WXperia/myReact-cli#readme",
   "dependencies": {
+    "core-js": "^3.6.4",
     "css-loader": "^3.4.2",
     "file-loader": "^5.1.0",
     "less": "^3.11.1",

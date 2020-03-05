@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Body from './body/body';
-import Footer from './footer/footer'
-import Header from './header/header'
+import Body from '@/components/body/body';
+import Footer from '@/components/footer/footer'
+import Header from '@/components/header/header'
 const App = () => {
     return (
         <div>
